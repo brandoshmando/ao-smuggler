@@ -1,7 +1,5 @@
 (ns mulerator.core (:require [mulerator.dealer :refer [max-mule-load dealer-dolls]] [mulerator.optimizer]) (:gen-class))
 
-
-
 (defn -main []
   (let [max-score (max-mule-load)
         packed-dolls (dealer-dolls)]

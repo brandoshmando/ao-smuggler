@@ -14,7 +14,9 @@
 (defn max-mule-load []
   (user-input-int "What is the max weight the mule can carry today?"))
 
-(defn dealer-dolls [])
-  ; (loop [x 0]
-  ;   (while (x == 1)
-  ;     (user-input-int ""))))
+(defn dealer-dolls []
+  (loop [x 0]
+    (while (== x 1)
+      (def doll-name (user-input-str "Doll Name"))
+      (def doll-value (user-input-int "Doll Value"))
+      (def doll-weight (user-input-int "Doll Weight")))))
