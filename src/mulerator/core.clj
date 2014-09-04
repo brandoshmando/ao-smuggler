@@ -9,4 +9,5 @@
   to_i(read-line))
 
 (defn -main []
-  (user-input "What was the Mule's weight today?"))
+  (let [max-score (user-input "What was the Mule's weight today?")]
+    (println max-score)))
