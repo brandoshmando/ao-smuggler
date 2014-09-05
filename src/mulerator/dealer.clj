@@ -1,9 +1,5 @@
 (ns mulerator.dealer (:gen-class))
 
-(defn user-input-str [call]
-  (println ("%s:" call))
-  (read-line))
-
 (defn to_i [string]
   (Integer. (re-find #"\d+" string)))
 
@@ -16,7 +12,8 @@
 
 (defn dealer-dolls []
   (loop [x 0]
-    (while (== x 1)
-      (def doll-name (user-input-str "Doll Name"))
+    (while (== x 0)
+      (println "Doll name?:")
+      (def doll-name (read-line))
       (def doll-value (user-input-int "Doll Value"))
       (def doll-weight (user-input-int "Doll Weight")))))
