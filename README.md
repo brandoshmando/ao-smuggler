@@ -1,7 +1,7 @@
 Mulerator
 =========
 
-Mulerator is a Clojure program/lib that is used to determine the highest value combination of pre-packaged dolls for a drug smuggler to use. Before you jump to any conclusions, its actual intent is to solve the [doll-smuggler](https://github.com/micahalles/doll-smuggler) problem as laid out by [Atomic Object](http://atomicobject.com/). The problem is a variant of the knapsack problem.
+Mulerator is a Clojure program/lib that is used to determine the highest value combination of pre-packaged dolls for a drug smuggler to use. Before you jump to any conclusions, its actual intent is to solve the [doll-smuggler](https://github.com/micahalles/doll-smuggler) problem laid out by [Atomic Object](http://atomicobject.com/). The problem is a variant of the knapsack problem.
 
 Basic Setup
 ===========
@@ -21,7 +21,7 @@ Once Leiningen is installed, you can run the tests with:
 
 lein test
 
-And teh Mulerator itself with:
+And the Mulerator itself with:
 
 lein run
 
