@@ -16,7 +16,7 @@
     ;   )))
 ; Returns a set of all possible combinations of packed dolls
 (defn powerset [dollset]
-  (let [result (reduce (fn [sum x] (concat sum (map #(conj % x) sum))) [#{}] dollset)]
+  (let [result (reduce (fn [sum x] (concat sum (map #(conj % x) sum))) [{}] dollset)]
       (vec result)))
 ; Initializes optimization of packed dolls/Function caller for optimizer module
 (defn optimize-value [packed-dolls max-weight]

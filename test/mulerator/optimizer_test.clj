@@ -9,3 +9,12 @@
   (def somevar [{:doll-weight 1} {:doll-weight 2} {:doll-weight 3}])
   (is (= 6 (combo-weight somevar)))
   )
+
+(deftest powerset-returns-all-possible-combos
+  (def somevar [{:doll-name "Brandon" :doll-weight 15 :doll-value 20}
+                {:doll-name "Craft" :doll-weight 10 :doll-value 15}])
+  (def result [{} {:doll-weight 15, :doll-value 20, :doll-name "Brandon"}
+                  {:doll-weight 10, :doll-value 15, :doll-name "Craft"}
+                  {:doll-weight 10, :doll-value 15, :doll-name "Craft"}])
+  (is (= result (powerset somevar)))
+  )
