@@ -11,12 +11,15 @@
   (user-input-int "What is the max weight the mule can carry today?"))
 
 (defn dealer-dolls []
-  (loop [x 0]
-    (when (== x 0)
-      (println "Doll name?:")
-      (def doll-name (read-line))
-      (def doll-value (user-input-int "Doll Value"))
-      (def doll-weight (user-input-int "Doll Weight"))
-      (println "Any more dolls? (Yes/No)")
-      (def prompt-answer (read-line))
-      (if (= (clojure.string/lower-case prompt-answer) "no") (inc x) (recur(+ x 0))))))
+  (vec
+    (loop [x 0]
+      (when (== x 0)
+        (println "Doll name?:")
+        (hash-map
+          :dollname (read-line)
+          :dollvalue (user-input-int "Doll Value")
+          :dollweight (user-input-int "Doll Weight"))
+        (println "Any more dolls? (Yes/No)")
+        ; (def prompt-answer (read-line))
+        ; (if (= (clojure.string/lower-case prompt-answer) "no") (inc x) (recur(+ x 0)))
+        ))))
