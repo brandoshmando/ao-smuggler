@@ -1,4 +1,9 @@
-(ns mulerator.core (:require [mulerator.dealer :refer [max-mule-load dealer-dolls]] [mulerator.optimizer :refer [total-value combo-weight optimize-value]]) (:gen-class))
+(ns mulerator.core (:require [mulerator.dealer :refer [max-mule-load dealer-dolls spacer]] [mulerator.optimizer :refer [total-value combo-weight optimize-value]]) (:gen-class))
+
+(defn close-message []
+  (spacer )
+  (println "Buh bye now!")
+  (spacer ))
 
 (defn print-total-value [optimized-combo]
   (println "-----Value/Weight-----")
@@ -24,4 +29,6 @@
   (let [max-weight (max-mule-load)
         packed-dolls (dealer-dolls)
         optimized-combo (optimize-value packed-dolls max-weight)]
-    (print-optimal-combo optimized-combo)))
+    (println packed-dolls)
+    (print-optimal-combo optimized-combo)
+    (close-message )))

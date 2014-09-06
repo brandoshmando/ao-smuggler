@@ -1,9 +1,13 @@
 (ns mulerator.dealer (:gen-class))
 
+(defn spacer []
+  (println "---------------"))
+
 (defn to_i [string]
   (Integer. (re-find #"\d+" string)))
 
 (defn user-input-int [call]
+  (spacer )
   (println (format "%s:" call))
   to_i(read-line))
 
@@ -14,6 +18,7 @@
   (vec
     (loop [x 0]
       (when (== x 0)
+        (spacer )
         (println "Doll name?:")
         (hash-map
           :dollname (read-line)

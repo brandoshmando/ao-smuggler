@@ -24,5 +24,4 @@
 (defn optimize-value [packed-dolls max-weight]
   (let [doll-combinations (powerset packed-dolls)
         eligible-combos (select-by-weight doll-combinations max-weight)
-        winning-combo (max-combo-value eligible-combos)]
-    ))
+        winning-combo (max-combo-value eligible-combos)]))
