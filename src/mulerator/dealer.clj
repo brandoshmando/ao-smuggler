@@ -25,6 +25,5 @@
           :dollvalue (user-input-int "Doll Value")
           :dollweight (user-input-int "Doll Weight"))
         (println "Any more dolls? (Yes/No)")
-        ; (def prompt-answer (read-line))
-        ; (if (= (clojure.string/lower-case prompt-answer) "no") (inc x) (recur(+ x 0)))
-        ))))
+        (def prompt-answer (read-line))
+        (if (= (clojure.string/lower-case prompt-answer) "no") (inc x) (recur(+ x 0)))))))
