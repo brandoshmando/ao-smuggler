@@ -23,8 +23,16 @@
         (hash-map
           :dollname (read-line)
           :dollvalue (user-input-int "Doll Value")
-          :dollweight (user-input-int "Doll Weight"))
-        (println "Any more dolls? (Yes/No)")
-        (def prompt-answer (read-line))
-        ; Logic to break loop if user ansers no to any more dolls
-        (if (= (clojure.string/lower-case prompt-answer) "no") (inc x) (recur(+ x 0)))))))
+          :dollweight (user-input-int "Doll Weight"))))))
+        ;This portion is meant to prompt the
+        ;user to answer yes or no if ther are
+        ;any more dolls to enter. If the
+        ;user answers yes, this logic
+        ;functions properly, if no, an error
+        ;is thrown. I commented this portion
+        ;out to show that the remainder of the
+        ;program runs though it is incorrect.
+
+        ; (println "Any more dolls? (Yes/No)")
+        ; (def prompt-answer (read-line))
+        ; (if (= (clojure.string/lower-case prompt-answer) "no") (inc x) (recur(+ x 0)))))))
